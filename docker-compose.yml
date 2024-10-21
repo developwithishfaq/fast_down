@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  # Your FastAPI service
+  fastapi:
+    build: .
+    container_name: fastapi
+    restart: unless-stopped
+    volumes:
+      - .:/app  
+    ports:
+      - "8001:8001" 
